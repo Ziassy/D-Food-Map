@@ -1,0 +1,140 @@
+.detail__title {
+    font-weight: bold;
+    padding: 5px 0;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: var(--secondary-color);
+}
+
+.detail__title:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 9;
+    background: var(--red-color);
+}
+
+
+.resto__detail {
+    padding: 20px 20px;
+}
+
+.resto__title {
+    color: var(--jingga-color);
+}
+
+.details__resto {
+    width: 49%;
+    box-sizing: border-box;
+}
+
+.details__resto img,
+.image-skeleton {
+    width: 100%;
+    height: 400px;
+}
+
+.details__resto2 {
+    width: 50%;
+    padding-left: 35px;
+}
+
+.deskripsi {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 17px;
+    color: var(--font-color);
+}
+
+.foods ul li,
+.drinks ul li {
+    list-style: none !important;
+    display: block !important;
+}
+
+.list__category {
+    background-color: var(--red-color);
+    padding: 8px;
+    border-radius: 10px;
+    color: var(--white-color);
+    font-size: 18px;
+}
+
+.list_drink,
+.list_food {
+    font-size: 17px;
+    color: var(--font-color);
+}
+
+
+.review img {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+}
+
+.card1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.user {
+    display: grid;
+    gap: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.reviewName {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.reviewTime {
+    color: var(--font-color);
+    font-size: 16px;
+}
+
+.reviewMessage {
+    width: 200px !important;
+}
+
+.reviewButton {
+    height: 44px;
+}
+
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: var(--jingga-color);
+    color: var(--white-color);
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.ratings span,
+.city span {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#info-detail {
+    color: var(--secondary-color);
+}

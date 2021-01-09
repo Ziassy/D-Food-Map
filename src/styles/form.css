@@ -1,0 +1,58 @@
+input[type=text],
+label,
+textarea,
+.form-review button {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px !important;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--jingga-color);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--jingga-color);
+
+}
+
+.form-review button {
+    padding: 13px;
+    border-radius: 10px;
+    color: var(--white-color);
+    background-color: var(--jingga-color);
+    margin: 10px auto;
+    display: block !important;
+    border: none;
+    cursor: pointer;
+
+}
+
+.form-review {
+    width: 50%;
+    margin: 0 auto;
+}
+
+input:focus,
+textarea:focus {
+    outline: none !important;
+    border: 2px solid var(--jingga-color);
+    box-shadow: 0 0 5px var(--jingga-color);
+}
+
+.form-review button:focus {
+    outline: none !important;
+}

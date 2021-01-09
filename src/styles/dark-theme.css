@@ -1,0 +1,53 @@
+.toggle-switch {
+    display: flex;
+    align-items: center;
+}
+
+.mode-switch {
+    display: inline-block;
+    padding: 22px;
+    position: relative;
+    width: 80px;
+}
+
+.mode-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--black-color);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .5s;
+}
+
+.slider:before {
+    background-color: var(--white-color);
+    bottom: 6px;
+    content: "";
+    min-height: 32px;
+    left: 12px;
+    position: absolute;
+    transition: .5s;
+    min-width: 32px;
+}
+
+input:checked+.slider {
+    background-color: var(--jingga-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
