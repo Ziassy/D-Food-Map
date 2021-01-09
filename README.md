@@ -47,12 +47,23 @@ D'Food Map website pencarian restaurant terdekat
 ![main](screenshot/foodmap.gif)
 
 __Home Page__
+
+
 ![Home](screenshot/home.JPG)
+
 __Detail__
+
+
 ![Detail](screenshot/deatil.JPG)
-__Davorite__
+
+__Favorite__
+
+
 ![favorite](screenshot/favorite.JPG)
+
 __Review__
+
+
 ![Review](screenshot/review.JPG)
 
 ---
