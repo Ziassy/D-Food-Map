@@ -44,16 +44,16 @@ D'Food Map website pencarian restaurant terdekat
 - [Pauziah](https://github.com/ziassy)
 
 ### Screenshot
-![main](screenshoot/foodmap.gif)
+![main](screenshot/foodmap.gif)
 
 __Home Page__
-![Home](screenshoot/home.JPG)
+![Home](screenshot/home.JPG)
 __Detail__
-![Detail](screenshoot/deatil.JPG)
+![Detail](screenshot/deatil.JPG)
 __Davorite__
-![favorite](screenshoot/favorite.JPG)
+![favorite](screenshot/favorite.JPG)
 __Review__
-![Review](screenshoot/review.JPG)
+![Review](screenshot/review.JPG)
 
 ---
 
