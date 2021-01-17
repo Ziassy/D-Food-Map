@@ -1,20 +1,14 @@
 import 'regenerator-runtime'; /* for async await transpile */
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
 import './components/app-bar';
 import './components/hero-app';
 import './components/footer';
 import './components/skip-content';
-import '../styles/main.css';
-import '../styles/restaurant.css';
-import '../styles/footer.css';
-import '../styles/responsive.css';
-import '../styles/dark-theme.css';
-import '../styles/custom.css';
-import '../styles/detail.css';
-import '../styles/form.css';
-import '../styles/skeleton.css';
-import 'lazysizes';
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-import App from './views/app';
+import './styles';
+
+import App from './app';
 import swRegister from './utils/sw-register';
 
 const app = new App({

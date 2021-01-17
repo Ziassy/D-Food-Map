@@ -1,0 +1,9 @@
+import './main.css';
+import './restaurant.css';
+import './footer.css';
+import './responsive.css';
+import './dark-theme.css';
+import './custom.css';
+import './detail.css';
+import './form.css';
+import './skeleton.css';

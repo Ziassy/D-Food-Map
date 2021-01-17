@@ -13,7 +13,7 @@ const imageminPngquant = require('imagemin-pngquant');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/scripts/index.js'),
+  entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
@@ -47,16 +47,16 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/templates/index.html'),
+      template: path.resolve(__dirname, 'src/index.html'),
       filename: 'index.html',
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/public/'),
+          from: path.resolve(__dirname, 'src/images/'),
           to: path.resolve(__dirname, 'dist/'),
           globOptions: {
-            ignore: ['**/images/**'],
+            ignore: ['**/img/**'],
           },
         },
       ],
@@ -78,12 +78,12 @@ module.exports = {
       crossorigin: 'anonymous',
       icons: [
         {
-          src: path.resolve('src/public/icons/icon.png'),
+          src: path.resolve('src/images/icons/icon.png'),
           sizes: [192, 256, 384, 512],
           purpose: 'any maskable',
         },
         {
-          src: path.resolve('src/public/icons/icon.png'),
+          src: path.resolve('src/images/icons/icon.png'),
           sizes: [192, 256, 384, 512],
           purpose: 'any maskable',
           ios: true,
@@ -91,7 +91,7 @@ module.exports = {
       ],
     }),
     new InjectManifest({
-      swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
+      swSrc: path.resolve(__dirname, 'src/sw.js'),
     }),
     new ImageminWebpackPlugin({
       plugins: [
