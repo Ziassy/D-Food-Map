@@ -1,12 +1,10 @@
-import DrawerInitiator from '../utils/drawer-initiator';
-import DarkMode from '../utils/dark-theme';
-import UrlParser from '../routes/url-parser';
-import routes from '../routes/routes';
+import DrawerInitiator from './utils/drawer-initiator';
+import DarkMode from './utils/dark-theme';
+import UrlParser from './routes/url-parser';
+import routes from './routes/routes';
 
 class App {
-  constructor({
-    button, drawer, content, toggle, theme,
-  }) {
+  constructor({ button, drawer, content, toggle, theme }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;

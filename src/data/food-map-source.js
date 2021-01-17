@@ -1,5 +1,5 @@
-import API_ENDPOINT from '../global/api-endpoint';
-import CONFIG from '../global/config';
+import API_ENDPOINT from '../config/api-endpoint';
+import CONFIG from '../config/config';
 
 class RestaurantDbSource {
   static async listRestaurant() {

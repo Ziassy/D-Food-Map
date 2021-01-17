@@ -1,9 +1,11 @@
-import CONFIG from '../../global/config';
+import CONFIG from '../../config/config';
 
 const restaurantListTemplate = (restaurant) => `
             <div tabindex="0" class="card__restaurant ml-20 mr-20 mb-20 my-20">
                 <div class="photo">
-                     <img tabindex="0" class="lazyload" src="./icons/placeholder.png" data-src="${CONFIG.BASE_IMAGE_URL_S + restaurant.pictureId}" alt="${restaurant.name}">
+                     <img tabindex="0" class="lazyload" src="./icons/placeholder.png" data-src="
+                     ${CONFIG.BASE_IMAGE_URL_S + restaurant.pictureId}" 
+                     alt="${restaurant.name}">
                      <div class="rating">
                         <span>
                             <i title="ratings" class="fa fa-star"></i>
@@ -13,13 +15,17 @@ const restaurantListTemplate = (restaurant) => `
                  </div>
                  <div class="detail__grid">
                      <h1 tabindex="0" class="title">
-                        <a href="#/detail/${restaurant.id}" tabindex="0">${restaurant.name} </a>
+                        <a href="#/detail/${restaurant.id}" tabindex="0">
+                        ${restaurant.name} 
+                        </a>
                      </h1>
                      <p tabindex="0" class="article">${restaurant.description}
                      </p>
                      <span>
                          <i class="fa fa-map-marker" aria-hidden="true"></i>
-                         <span tabindex="0" class="place">${restaurant.city}</span>
+                         <span tabindex="0" class="place">
+                         ${restaurant.city}
+                           </span>
                     </span>
                  </div>
             </div>
@@ -28,10 +34,13 @@ const restaurantListTemplate = (restaurant) => `
 const detailTemplate = (detail) => `
             <div class="flexbox-center my-10">
                 <div id="details__resto" class="details__resto">
-                    <img src="${CONFIG.BASE_IMAGE_URL_M + detail.pictureId}" class="img_detail radius-20" alt="${detail.name}">
+                    <img src="${CONFIG.BASE_IMAGE_URL_M + detail.pictureId}" 
+                    class="img_detail radius-20" alt="${detail.name}">
                 </div>
                 <div class="details__resto2">
-                    <h1 tabindex="0" class="resto__title text-center">${detail.name}</h1>
+                    <h1 tabindex="0" class="resto__title text-center">
+                    ${detail.name}
+                    </h1>
                     <div tabindex="0" class="ratings mb-10">
                         <span>
                             <i title="ratings" class="fa fa-star"></i>
@@ -40,12 +49,19 @@ const detailTemplate = (detail) => `
                     </div>
                     <span tabindex="0" class="city">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <span class="place">${detail.address}, ${detail.city}</span>
+                        <span class="place">
+                        ${detail.address}, ${detail.city}
+                        </span>
                     </span>
                     <p tabindex="0" class="deskripsi"> ${detail.description}</p>
                     <h2 tabindex="0">Category</h2>
                     <div class="my-20 flexbox">
-                        ${detail.categories.map((category) => `<span tabindex="0" class="list__category mr-10">${category.name}</span> `).join('')}
+                        ${detail.categories
+                          .map(
+                            (category) =>
+                              `<span tabindex="0" class="list__category mr-10">${category.name}</span> `,
+                          )
+                          .join('')}
                     </div >
                 </div >
             </div >
@@ -54,21 +70,29 @@ const detailTemplate = (detail) => `
                 <div class="foods mb-20 my-20">
                     <h2 tabindex="0" class="mb-10">Foods</h2>
                     <ul>
-                ${detail.menus.foods.map((food) => `
+                ${detail.menus.foods
+                  .map(
+                    (food) => `
                     <li class="mb-20 my-10">
                         <span tabindex="0" class="list_drink">🍛 ${food.name}</span>
                     </li>
-                    `).join('')}      
+                    `,
+                  )
+                  .join('')}      
                     </ul>
                 </div>
                 <div tabindex="0" class="drinks">
                     <h2 tabindex="0" class="mb-10">Drinks</h2>
                     <ul>
-                    ${detail.menus.drinks.map((drink) => `
+                    ${detail.menus.drinks
+                      .map(
+                        (drink) => `
                     <li class="mb-20 my-10">
                         <span tabindex="0" class="list_drink">🥂 ${drink.name} </span>
                     </li>
-                    `).join('')}
+                    `,
+                      )
+                      .join('')}
                     </ul>
                 </div>
             </div>
@@ -76,7 +100,9 @@ const detailTemplate = (detail) => `
     <div tabindex="0" class="card1 radius-20">
         <h2 tabindex="0" class="my-20">Costumer Review</h2>
         <div tabindex="0" class="review"> 
-        ${detail.customerReviews.map((review) => `
+        ${detail.customerReviews
+          .map(
+            (review) => `
         <div class="my-20 mb-20 flexbox">
             <img src="./icons/user.png" alt="${review.name}">
             <div class="user ml-20">
@@ -85,7 +111,9 @@ const detailTemplate = (detail) => `
                 <p tabindex="0" class="reviewMessage">${review.review}</p>
             </div>
         </div>
-        `).join('')}
+        `,
+          )
+          .join('')}
         </div>
     </div>
 `;
@@ -170,5 +198,8 @@ const skeletonDetail = `
 `;
 
 export {
-  restaurantListTemplate, detailTemplate, skeletonRestaurant, skeletonDetail,
+  restaurantListTemplate,
+  detailTemplate,
+  skeletonRestaurant,
+  skeletonDetail,
 };

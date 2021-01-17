@@ -6,7 +6,7 @@ import { StaleWhileRevalidate } from 'workbox-strategies';
 import { registerRoute } from 'workbox-routing/registerRoute';
 import { skipWaiting, clientsClaim, setCacheNameDetails } from 'workbox-core';
 import { ExpirationPlugin } from 'workbox-expiration';
-import CONFIG from './global/config';
+import CONFIG from './config/config';
 
 skipWaiting();
 clientsClaim();
@@ -60,7 +60,8 @@ registerRoute(
 
 registerRoute(
   ({ url }) =>
-    url.origin === 'https://fonts.googleapis.com' || url.origin === 'https://fonts.gstatic.com',
+    url.origin === 'https://fonts.googleapis.com' ||
+    url.origin === 'https://fonts.gstatic.com',
   new StaleWhileRevalidate(),
 );
 

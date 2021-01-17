@@ -1,4 +1,4 @@
-import favoriteRestaurantIdb from '../src/scripts/data/food-map-idb';
+import favoriteRestaurantIdb from '../src/data/food-map-idb';
 import * as TestFactories from './helpers/TestFactories';
 
 describe('Liking A Restaurant', () => {
@@ -13,13 +13,17 @@ describe('Liking A Restaurant', () => {
   it('should show the like button when the restaurant has not been liked before', async () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
-    expect(document.querySelector('[aria-label="like this restaurant"]')).toBeTruthy();
+    expect(
+      document.querySelector('[aria-label="like this restaurant"]'),
+    ).toBeTruthy();
   });
 
   it('should not show the unlike button when the restaurant has not been liked before', async () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
-    expect(document.querySelector('[aria-label="unlike this restaurant"]')).toBeFalsy();
+    expect(
+      document.querySelector('[aria-label="unlike this restaurant"]'),
+    ).toBeFalsy();
   });
 
   it('should be able to like the restaurant', async () => {
